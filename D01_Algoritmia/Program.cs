@@ -50,7 +50,7 @@ namespace D01_Algoritmia
             //E12_InformacaoTurma.Processar();
 
             //Procedimento para Saudar o Utilizador
-            //E13_Saudar.Processar("José");
+            E13_Saudar.Processar();
 
             //Criar uma função para somar 10 e 20 e mostrar o resultado
             //E14_SomaDezVinte.Processar();
