@@ -50,17 +50,19 @@ namespace D01_Algoritmia
             //E12_InformacaoTurma.Processar();
 
             //Procedimento para Saudar o Utilizador
-            E13_Saudar.Processar();
+            //E13_Saudar.Processar();
 
             //Criar uma função para somar 10 e 20 e mostrar o resultado
             //E14_SomaDezVinte.Processar();
 
             //Criar uma função para somar dois numeros pedidos ao utilizador e mostrar o resultado
             //E15_SomaNumeros.Processar();
-            
+
             // Calcular a soma de 2 números se forem ambos diferentes de zero.
             //E16_SomaDoisNumerosDiferentesZero.Processar();
 
+            //
+            E17_Calculadora.Processar();
 
             Console.ReadKey();
 
