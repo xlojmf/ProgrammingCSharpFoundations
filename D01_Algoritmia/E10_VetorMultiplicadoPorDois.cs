@@ -20,14 +20,13 @@ namespace D01_Algoritmia
             }
             */
             int[] vector = new int[10];
+
             for (int i = 0; i < vector.Length; i++)
             {
-                vector[i] = i+1;
-             }
-            for (int i = 0; i < vector.Length; i++)
-            {
-                vector[i] = vector[i] * 2;
-                Console.WriteLine(vector[i]);
+                vector[i] = i + 1;
+                //vector[i] = vector[i] * 2;
+                //Console.WriteLine(vector[i]);
+                Console.WriteLine(Convert.ToString(vector[i]) + " x 2 = " + Convert.ToString(vector[i] * 2));
             }
         }
     }
