@@ -10,12 +10,37 @@ namespace D01_Algoritmia
     {
         public static void Processar()
         {
-            int inscritos;
-            
-            Console.WriteLine("Introduza um número");
-            inscritos = Convert.ToInt32(Console.ReadLine());
+           
+            int numeroFormandos;
+            string nome, curso;
+            bool sabeProgramar;
 
-            Console.WriteLine("Número total de inscritos" + Convert.ToString(inscritos));
+            Console.Write("Nº de formandos a inscrever? ");
+            numeroFormandos = Convert.ToInt16(Console.ReadLine());
+
+            for (int i = 0; i < numeroFormandos; i++)
+            {
+
+                Console.WriteLine("\n\n-----------------------\nFormando nº " + Convert.ToString(i + 1) + "\n-----------------------");
+
+                Console.Write("Nome: ");
+                nome = Console.ReadLine();
+
+                Console.Write("Sabe programar (true / false)? ");
+                sabeProgramar = Convert.ToBoolean(Console.ReadLine());
+
+                if (sabeProgramar)
+                {
+                    curso = "C# Foundations";
+                }
+                else
+                {
+                    curso = "Programming Fundamentals";
+                }
+
+                Console.Write("Inscrito no curso: " + curso + "\n\n");
+
+            }
         }
     }
 }

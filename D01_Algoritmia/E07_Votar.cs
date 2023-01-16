@@ -12,9 +12,11 @@ namespace D01_Algoritmia
         {
             int idade;
             string mensagem;
+
             Console.WriteLine("Introduza um número");
             idade = Convert.ToInt16(Console.ReadLine());
-            if (idade > 18)
+
+            if (idade >= 18)
             {
                 mensagem = "O cidadão pode votar";
             }
@@ -22,6 +24,7 @@ namespace D01_Algoritmia
             {
                 mensagem = "O cidadão não pode votar";
             }
+
             Console.WriteLine(mensagem);
         }
     }
