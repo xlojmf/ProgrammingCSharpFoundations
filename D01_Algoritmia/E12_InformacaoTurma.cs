@@ -48,3 +48,65 @@ namespace D01_Algoritmia
         }
     }
 }
+
+
+/*
+ 
+namespace D01_Algoritmia
+{
+
+    internal class E12_PreencherListarTurma_Modulos
+    {
+
+        internal static void E12_PreencherListarTurma_Modulos_Processar()
+        {
+
+            string[,] turma = LerDadosTurma();
+            EscreverDadosTurma(turma);
+
+        }
+
+        internal static string[,] LerDadosTurma()
+        {
+
+            string[,] turma = new string[3, 4];
+
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Write("Nº: ");
+                turma[i, 0] = Console.ReadLine();
+                Console.Write("Nome: ");
+                turma[i, 1] = Console.ReadLine();
+                Console.Write("Localidade: ");
+                turma[i, 2] = Console.ReadLine();
+                Console.Write("Email: ");
+                turma[i, 3] = Console.ReadLine();
+                Console.WriteLine();
+            }
+
+            return turma;
+
+        }
+
+        internal static void EscreverDadosTurma(string[,] turma)
+        {
+
+            Console.WriteLine("\n\n----------------\nTurma\n----------------\n");
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int c = 0; c < 4; c++)
+                {
+                    Console.Write(turma[i, c] + "\t");
+                }
+                Console.WriteLine();
+            }
+
+        }
+
+    }
+
+}
+ 
+ 
+ */
