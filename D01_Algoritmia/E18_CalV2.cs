@@ -13,12 +13,8 @@ namespace D01_Algoritmia
         {
             double num1 = ReadNumber("Insira o primeiro número");
             double num2 = ReadNumber("Insira o segundo número");
-            WriteOperation(Soma(num1, num2));
-            WriteOperation(Subtracao(num1, num2));
-            WriteOperation(Multiplicacao(num1, num2));
-            WriteOperation(Divisao(num1, num2));
-
-            // array para listar todos os resultados
+            string[] cal = { Soma(num1, num2), Subtracao(num1, num2), Multiplicacao(num1, num2), Divisao(num1, num2) };
+            WriteArray(cal);
         }
 
         internal static double ReadNumber(string pedido)
@@ -57,5 +53,13 @@ namespace D01_Algoritmia
             Console.WriteLine(pedido);
         }
 
+        internal static void WriteArray(string[] cal) { 
+            
+
+            for (int i = 0; i<cal.Length; i++)
+            {
+                Console.WriteLine(cal[i]);
+            }
+        }
     }
 }

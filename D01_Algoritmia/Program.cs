@@ -62,7 +62,8 @@ namespace D01_Algoritmia
             //E16_SomaDoisNumerosDiferentesZero.Processar();
 
             //
-            E17_Calculadora.Processar();
+            //E17_Calculadora.Processar();
+            E17_CalV2.Processar();
 
             Console.ReadKey();
 
