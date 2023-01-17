@@ -57,6 +57,7 @@
     <Compile Include="E15_SomaNumeros.cs" />
     <Compile Include="E17_Calculadora.cs" />
     <Compile Include="E18_CalV2.cs" />
+    <Compile Include="E19_MatrizCursoV1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="E16_SomaDoisNumerosDiferentesZero.cs" />

@@ -63,7 +63,10 @@ namespace D01_Algoritmia
 
             //
             //E17_Calculadora.Processar();
-            E17_CalV2.Processar();
+            //E17_CalV2.Processar();
+
+            // ler e listar os dados de 5 cursos: id nome e area
+            E19_MatrizCursoV1.Processar();
 
             Console.ReadKey();
 
