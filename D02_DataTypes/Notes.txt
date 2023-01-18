@@ -1,0 +1,24 @@
+﻿Data Types
+------------
+
+Value types		(nativos)
+int
+double
+
+Reference types	(não nativos criados por nós --> são na realidade objects)
+string
+
+
+Classe Formando
+
+	3 propriedades
+		nome
+		data de nascimento
+		.....
+
+
+	2 métodos
+		inscrever
+		apagar
+		consultar
+		....
