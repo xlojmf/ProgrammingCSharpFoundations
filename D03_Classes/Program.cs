@@ -31,14 +31,29 @@ namespace D03_Classes
             
              */
 
+            // aula stuff depois mudar pq do construtor forma mais simples
+            //Trainee student = new Trainee();
+            // invocar os metodos do obbjecto
+            //student.Create();
+            //student.ListT();
 
-            Trainee trainee1 = new Trainee(1, "José Ferraz", "jmf@xlo.com", new DateTime(1982, 03, 30));
+
+
+            // aula stuff depois mudar pq do construtor forma mais simples
+            Course curso = new  Course();
+            // invocar os metodos do obbjecto
+            curso.Create();
+            curso.List();
+
+
+            //my stuff
+            /*Trainee trainee1 = new Trainee(1, "José Ferraz", "jmf@xlo.com", new DateTime(1982, 03, 30));
             Trainee trainee2 = Trainee.CreateTrainee();
 
             Trainee.List(trainee1);
             Trainee.List(trainee2);
 
-            Teste();
+            Teste();*/
             Console.ReadKey();
  
 

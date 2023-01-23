@@ -7,6 +7,7 @@ namespace D03_Classes
     internal class Trainee
     {
 
+        #region Properties
         public int TraineeId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
@@ -19,7 +20,31 @@ namespace D03_Classes
             Email = email;
             BirthDate = birthDate;
         }
+        #endregion
 
+
+        #region Methods
+        //aula stuff
+        public void Create()
+        {
+            Console.WriteLine("Id:");
+            TraineeId = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("Name: ");
+            Name = Console.ReadLine();
+            Console.WriteLine("Email: ");
+            Email = Console.ReadLine();
+            Console.WriteLine("BirthDate: ");
+            BirthDate= Convert.ToDateTime(Console.ReadLine());
+        }
+
+        public void ListT()
+        {
+            Console.WriteLine("Trainee ID\tName\tEmail\tBirthdate");
+            Console.WriteLine($"\t{TraineeId}\t{Name}\t{Email}\t{BirthDate.ToShortDateString()}\n");
+        }
+
+
+        //my stuff
         internal static Trainee CreateTrainee()
         {
             Console.WriteLine("Enter Trainee ID:");
@@ -34,9 +59,9 @@ namespace D03_Classes
             Console.WriteLine("Enter Trainee Birthdate (yyyy-MM-dd):");
             //DateTime birthDate = DateTime.Parse(Console.ReadLine()); //perceber como mudar a ordem
             var cultura = new CultureInfo("pt-PT");
-            DateTime birthDate = DateTime.Parse(Console.ReadLine(), cultura);
+            DateTime birthDate = DateTime.Parse(Console.ReadLine(), cultura); // errado nao devemos converter ao atruibir convertemos para mostrar?
 
-            return new Trainee(traineeid, name, email, birthDate);
+            return new Trainee(traineeid, name, email, birthDate); // errado nao devemos instanciar o objecto dentro do metodo
         }
 
         internal static void List(Trainee trainee)
@@ -54,7 +79,7 @@ namespace D03_Classes
                 Console.WriteLine($"\t{trainee.TraineeId}\t{trainee.Name}\t{trainee.Email}\t{trainee.BirthDate.ToShortDateString()}\n");
             }
         }
-
+        #endregion
 
     }
 

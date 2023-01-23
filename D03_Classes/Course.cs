@@ -23,11 +23,22 @@ namespace D03_Classes
         #region Methods
         internal void Create()
         {
+            Console.WriteLine("Id:");
+            CourseID = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("Name: ");
+            Name = Console.ReadLine();
+            Console.WriteLine("Start Date: ");
+            StartDate = Convert.ToDateTime(Console.ReadLine());
+            Console.WriteLine("End Date: ");
+            EndDate = Convert.ToDateTime(Console.ReadLine());
+            Console.WriteLine("DurationInHours:");
+            DurationInHours = Convert.ToInt16(Console.ReadLine());
 
         }
         internal void List()
         {
-
+            Console.WriteLine("Trainee ID\tName\tEmail\tBirthdate");
+            Console.WriteLine($"\t{CourseID.ToString()}\t{Name}\t{StartDate.ToShortDateString()}\t{EndDate.ToShortDateString()}\t{DurationInHours.ToString()}\n");
         }
         #endregion
     }
