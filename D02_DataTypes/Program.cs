@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace D02_DataTypes
 {
     internal class Program
     {
-        
+        private static Trainee trainee;
 
         static void Main(string[] args)
         {
@@ -50,11 +47,11 @@ namespace D02_DataTypes
             idade = 10;
             peso = 10.5;
             altura = 1.5F;
-            inscrito= false;
+            inscrito = false;
             pago = false;
 
-            data = new DateTime(2023,1,20);
-            hora = new DateTime(2023,1,20,21,14,00);
+            data = new DateTime(2023, 1, 20);
+            hora = new DateTime(2023, 1, 20, 21, 14, 00);
             agora = DateTime.Now;
             dataAtual = DateTime.Today;
             dataVazia = DateTime.MinValue;
@@ -65,7 +62,7 @@ namespace D02_DataTypes
 
             course01.CourseID = 1;
             course01.Name = "SQL Foundations to Advanced";
-            course01.StartDate = new DateTime(2022,11,11);
+            course01.StartDate = new DateTime(2022, 11, 11);
             course01.EndDate = new DateTime(2022, 12, 5);
             course01.DurationInHours = 33;
 
@@ -153,21 +150,21 @@ namespace D02_DataTypes
             #endregion
 
             Trainee trainee1 = new Trainee(1, "José Ferraz", "jmf@xlo.com", new DateTime(1982, 03, 30));
+            Trainee trainee2 = Trainee.CreateTrainee();
 
-            Trainee trainee2 = (Trainee)Trainee.CreateTrainee();// o pq de usar o (Trainee antes)
             Trainee.List(trainee1);
             Trainee.List(trainee2);
 
-            // Teste();
+            Teste();
             Console.ReadKey();
         }
 
-       // private static Trainee trainee; // pq de ter q por para usar listas será pq dos publics e afins
+        // private static Trainee trainee; // pq de ter q por para usar listas será pq dos publics e afins injeccao de dependecia?
         static void Teste()
         {
             List<Trainee> trainees = new List<Trainee>();
-            Trainee.CreateTrainee();
-          //  trainees.Add(trainee);
+            trainee = Trainee.CreateTrainee();
+            trainees.Add(trainee);
             Trainee.ListTrainees(trainees);
         }
     }
