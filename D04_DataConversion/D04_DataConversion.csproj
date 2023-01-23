@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{47CA8469-75BD-4630-B3C7-715BC704E713}</ProjectGuid>
+    <ProjectGuid>{42ED07D7-425E-41B9-9D42-8A5636940B45}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>D03_Classes</RootNamespace>
-    <AssemblyName>D03_Classes</AssemblyName>
+    <RootNamespace>D04_DataConversion</RootNamespace>
+    <AssemblyName>D04_DataConversion</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,17 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Course.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Trainee.cs" />
-    <Compile Include="Trainer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="_notes.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
