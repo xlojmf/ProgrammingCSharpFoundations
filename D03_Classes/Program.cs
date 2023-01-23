@@ -14,32 +14,13 @@ namespace D03_Classes
         static void Main(string[] args)
         {
 
-            /*
-             
-            Console.WriteLine("\n-------------\nReference Types\n-----------\n");
-            Console.WriteLine(course01.CourseID);
-            Console.WriteLine(course01.Name);
-            Console.WriteLine(course01.StartDate.ToString("yyyy-MM-dd"));
-            Console.WriteLine(course01.EndDate.ToString("yyyy-MM-dd"));    
-            Console.WriteLine(course01.DurationInHours);
-            Console.WriteLine("-------------");
-            Console.WriteLine(course02.CourseID);
-            Console.WriteLine(course02.Name);
-            Console.WriteLine(course02.StartDate.ToString("yyyy-MM-dd"));
-            Console.WriteLine(course02.EndDate.ToString("yyyy-MM-dd"));
-            Console.WriteLine(course02.DurationInHours);
-            
-             */
-
+  
             // aula stuff depois mudar pq do construtor forma mais simples
-            //Trainee student = new Trainee();
+            Trainee student = new Trainee();
             // invocar os metodos do obbjecto
-            //student.Create();
-            //student.ListT();
+            student.Create();
+            student.ListT();
 
-
-
-            // aula stuff depois mudar pq do construtor forma mais simples
             Course curso = new  Course();
             // invocar os metodos do obbjecto
             curso.Create();

@@ -13,8 +13,21 @@ namespace D03_Classes
         public string Email { get; set; }
         public DateTime BirthDate { get; set; }
 
+        #endregion
+
+        #region Constructor
+
+        public Trainee() {
+            //construtor defualt
+            TraineeId = 0;
+            Name = ""; 
+            Email = string.Empty;
+            BirthDate = DateTime.MinValue;
+        }         
+
         public Trainee(int traineeid, string name, string email, DateTime birthDate) // inicializar o constructor para usar
         {
+  
             TraineeId = traineeid;
             Name = name;
             Email = email;
