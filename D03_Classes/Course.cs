@@ -37,7 +37,7 @@ namespace D03_Classes
         }
         internal void List()
         {
-            Console.WriteLine("Trainee ID\tName\tEmail\tBirthdate");
+            Console.WriteLine("Course ID\tName\tStart Date\tEnd Date\tDuration");
             Console.WriteLine($"\t{CourseID.ToString()}\t{Name}\t{StartDate.ToShortDateString()}\t{EndDate.ToShortDateString()}\t{DurationInHours.ToString()}\n");
         }
         #endregion
