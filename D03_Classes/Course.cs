@@ -19,6 +19,29 @@ namespace D03_Classes
         public double DurationInHours { get; set; }
 
         #endregion
+        
+        #region Constructor
+
+        public Course()
+        {
+            //construtor defualt
+            CourseID = 0;
+            Name = "";
+            StartDate = DateTime.MinValue;
+            EndDate = DateTime.MinValue;
+            DurationInHours = 0;
+        }
+
+        public Course(int courseid, string name, DateTime startDate, DateTime endDate, int duration) // inicializar o constructor para usar
+        {
+
+            CourseID = courseid;
+            Name = name;
+            StartDate = startDate;
+            EndDate = endDate;
+            DurationInHours = duration; 
+        }
+        #endregion
 
         #region Methods
         internal void Create()
@@ -36,6 +59,12 @@ namespace D03_Classes
 
         }
         internal void List()
+        {
+            Console.WriteLine("Course ID\tName\tStart Date\tEnd Date\tDuration");
+            Console.WriteLine($"\t{CourseID}\t{Name}\t{StartDate.ToShortDateString()}\t{EndDate.ToShortDateString()}\t{DurationInHours}\n");
+        }
+
+        internal void ListT(Course course)
         {
             Console.WriteLine("Course ID\tName\tStart Date\tEnd Date\tDuration");
             Console.WriteLine($"\t{CourseID}\t{Name}\t{StartDate.ToShortDateString()}\t{EndDate.ToShortDateString()}\t{DurationInHours}\n");

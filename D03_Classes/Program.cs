@@ -15,32 +15,36 @@ namespace D03_Classes
         {
 
   
-            // aula stuff depois mudar pq do construtor forma mais simples
+            // Aula Instanciar course e student
             Trainee student = new Trainee();
+            Course curso = new Course();
+
+
             // invocar os metodos do obbjecto
             student.Create();
             student.ListT();
-
-            Course curso = new  Course();
+                     
             // invocar os metodos do obbjecto
             curso.Create();
             curso.List();
 
 
             //my stuff
-            /*Trainee trainee1 = new Trainee(1, "José Ferraz", "jmf@xlo.com", new DateTime(1982, 03, 30));
+            Trainee trainee1 = new Trainee(1, "José Ferraz", "jmf@xlo.com", new DateTime(1982, 03, 30));
+            Course course1= new Course(1,"Jose Ferraz", new DateTime(1982, 03, 30) , new DateTime(1982, 03, 30),30);
+            
+            course1.List();
+
             Trainee trainee2 = Trainee.CreateTrainee();
 
             Trainee.List(trainee1);
             Trainee.List(trainee2);
 
-            Teste();*/
+            Teste();
             Console.ReadKey();
  
 
-        }
-
-        // private static Trainee trainee; // pq de ter q por para usar listas será pq dos publics e afins injeccao de dependecia?
+        }      
 
         static void Teste()
         {
