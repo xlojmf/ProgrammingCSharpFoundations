@@ -5,8 +5,7 @@ namespace D02_DataTypes
 {
     internal class Program
     {
-        private static Trainee trainee;
-
+        
         static void Main(string[] args)
         {
             #region 1. Declare variables and instanciar objects
@@ -77,12 +76,9 @@ namespace D02_DataTypes
             #endregion
 
             #region 3. Work in console
-
-
-            #endregion
-
+         
             #region Values Types
-            /*
+            
             Console.WriteLine("\n-------------\nValue Types\n-----------\n");
             Console.WriteLine("Byte - idade" + idade);
             Console.WriteLine("Byte - idade " + Convert.ToString(idade)); // conversão
@@ -145,27 +141,14 @@ namespace D02_DataTypes
             Console.WriteLine(course02.StartDate.ToString("yyyy-MM-dd"));
             Console.WriteLine(course02.EndDate.ToString("yyyy-MM-dd"));
             Console.WriteLine(course02.DurationInHours);
-            */
+            
 
             #endregion
 
-            Trainee trainee1 = new Trainee(1, "José Ferraz", "jmf@xlo.com", new DateTime(1982, 03, 30));
-            Trainee trainee2 = Trainee.CreateTrainee();
 
-            Trainee.List(trainee1);
-            Trainee.List(trainee2);
-
-            Teste();
-            Console.ReadKey();
         }
 
-        // private static Trainee trainee; // pq de ter q por para usar listas será pq dos publics e afins injeccao de dependecia?
-        static void Teste()
-        {
-            List<Trainee> trainees = new List<Trainee>();
-            trainee = Trainee.CreateTrainee();
-            trainees.Add(trainee);
-            Trainee.ListTrainees(trainees);
-        }
+
+        #endregion
     }
 }
