@@ -38,7 +38,7 @@ namespace D03_Classes
 
         #region Methods
         //aula stuff
-        public void Create()
+        public void Create() //instance metdo pq nao usa o static, se usar o static posso chamar directo pela classe e nao pela instancia
         {
             Console.WriteLine("Id:");
             TraineeId = Convert.ToInt16(Console.ReadLine());
