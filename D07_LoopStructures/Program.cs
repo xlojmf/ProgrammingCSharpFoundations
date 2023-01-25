@@ -68,12 +68,14 @@ namespace D07_LoopStructures
 
             // Primeiro ver estruturas de dados: arrays e collections
 
-            /*
-            foreach (var item in collection)
-            {
+            string[] collection = { "José", "Miguel", "Dos", "Santos", "Ferraz" };
+            string[] nomes01 = new string[5] { "sd", "zd", "ff", "gg", "ll" };
 
+            foreach (string item in collection)
+            {
+                Console.WriteLine(item);
             }
-            */
+            
 
             Utility.TerminateConsole();
             #endregion

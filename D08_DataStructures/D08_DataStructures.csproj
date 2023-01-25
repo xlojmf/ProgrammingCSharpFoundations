@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{27D5566C-FE91-4D94-81FF-3B6DFCE56846}</ProjectGuid>
+    <ProjectGuid>{C0EE22DC-1018-498D-AACF-2A731F7CC7C8}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>D05_DataTypesManipulation</RootNamespace>
-    <AssemblyName>D05_DataTypesManipulation</AssemblyName>
+    <RootNamespace>D08_DataStructures</RootNamespace>
+    <AssemblyName>D08_DataStructures</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

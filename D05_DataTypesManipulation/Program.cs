@@ -1,4 +1,6 @@
-﻿using System;
+﻿using D00_Utility;
+using System;
+using System.Net;
 using System.Text;
 
 namespace D05_DataTypesManipulation
@@ -40,11 +42,14 @@ namespace D05_DataTypesManipulation
 
             // Clássico
             cursoCompleto00 = area + ", " + categoria + ", " + curso;   // Evitar usar e substituir por outro método
+            
+            // Concatenar
             cursoCompleto01 = $"{area}, {categoria}, {curso}";
             cursoCompleto02 = string.Join(", ", area, categoria, curso);
+            cursoCompleto03 = string.Concat(area, " - ", categoria, ", ", curso);
 
             // StringBuilder
-            cursoCompleto03 = string.Concat(area, " - ", categoria, ", ", curso);
+
             cursoCompleto04.Append(area);
             cursoCompleto04.Append("\t");
             cursoCompleto04.Append(categoria);
@@ -52,24 +57,21 @@ namespace D05_DataTypesManipulation
             cursoCompleto04.Append(curso);
 
             // Maiúsculas, minúsculas, 1ª palavra do curso, curso completo
-            Console.WriteLine("----------------------------------------------------");
-            Console.WriteLine("MANIPULAÇÃO DE STRINGS");
-            Console.WriteLine("----------------------------------------------------");
+            Utility.WriteTitle("MANIPULAÇÃO DE STRINGS");
+
             Console.WriteLine($"Maiúsculas: {cursoCompleto01.ToUpper()}");
             Console.WriteLine($"Minúsculas: {cursoCompleto02.ToLower()}");
             Console.WriteLine($"1ª parte do curso (fixo): {cursoCompleto03.Substring(0, 11)}");  // Informática
             Console.WriteLine($"1ª parte do curso (dinâmico): {cursoCompleto02.Substring(0, cursoCompleto02.IndexOf(","))}");
             Console.WriteLine($"Curso: {cursoCompleto04}");
 
-            Console.ReadKey();
-            Console.Clear();
+            Utility.TerminateConsole();
 
             #endregion
 
             #region Manipulação numbers
-            Console.WriteLine("----------------------------------------------------");
-            Console.WriteLine("MANIPULAÇÃO DE NUMBERS");
-            Console.WriteLine("----------------------------------------------------");
+            Utility.WriteTitle("MANIPULAÇÃO DE NUMBERS");
+
             Console.WriteLine($"Mínimo: {Math.Min(valor01, valor02)}");
             Console.WriteLine($"Máximo: {Math.Max(valor01, valor02)}");
             Console.WriteLine($"Absoluto: {Math.Abs(valor04)}");
@@ -77,15 +79,13 @@ namespace D05_DataTypesManipulation
             Console.WriteLine($"Raíz quadrada: {Math.Sqrt(valor05)}");
             Console.WriteLine($"Raíz quadrada: {testeSqrt}");
 
-            Console.ReadKey();
-            Console.Clear();
+            Utility.TerminateConsole();
 
             #endregion
 
             #region Manipulação datetime
-            Console.WriteLine("----------------------------------------------------");
-            Console.WriteLine("MANIPULAÇÃO DE DATETIME");
-            Console.WriteLine("----------------------------------------------------");
+            Utility.WriteTitle("MANIPULAÇÃO DE DATETIME");
+
             Console.WriteLine($"Hora atual + 10 minutos (v1): {timestamp.AddMinutes(10).Minute}");
             Console.WriteLine($"Hora atual + 10 minutos (v2): {timestamp.AddMinutes(10).ToString("mm")}");
             Console.WriteLine($"Próxima hora: {timestamp.AddHours(1).Hour}");
@@ -94,7 +94,7 @@ namespace D05_DataTypesManipulation
             #endregion
             #endregion
 
-            Console.ReadKey();
+            Utility.TerminateConsole();
 
         }
 

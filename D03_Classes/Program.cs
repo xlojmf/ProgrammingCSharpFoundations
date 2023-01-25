@@ -28,6 +28,23 @@ namespace D03_Classes
             curso.Create();
             curso.List();
 
+            // Métodos de instância são chamados através da instância
+            // 1.   Criar a instância
+            //      Student student00 = new Student();
+            // 2.   Chamar o método (Create) através da instância (student00)
+            //      student00.Create();
+            // Métodos estáticos são chamados diretamente da classe
+            // Se a classe for doutro projeto
+            // 1.   Fazer uma reference à assembly (.dll)
+            //      project > pasta references > botão direito do rato > add reference
+            // 2.   Adicionar a namespace
+            //      using D00_Utility;
+            // 3.   Chamar o método da classe:
+            //      Utility.SetUnicodeConsole();
+            // Se a classe for da mesma namespace
+            // 1.   Chamar o método da classe:
+            //      Utility.SetUnicodeConsole();
+
 
             //my stuff
             Trainee trainee1 = new Trainee(1, "José Ferraz", "jmf@xlo.com", new DateTime(1982, 03, 30));
