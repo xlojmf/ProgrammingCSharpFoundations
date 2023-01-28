@@ -24,13 +24,12 @@ namespace E01_Calculator_V1
             Subtrair()
             Multiplicar()
             Dividir()
-            EscreverResultado()
             ...
-            (+ os utilitarios se quisermos. mas devemos colocar na calculadora e nao no Utility)
+            (+ os utilitarios se quisermos. mas devemos colocar na calculadora e nao no Utility ?????)
 
             Quando a aplicacao arranca vai aparecer menu no ecra a perguntar a opercao que ela quer e enquanto nao selecionar na opcao correcta nao sai do menu. --> para poder usar estruturas ciclicas. 
             no menu deve constar tambem um valor para sair do menu ( 0 - saida, 1 - soma, 2 - subtracao, 3 - multiplicacao, 4 - divisao)
-            **Temos de garantir que sao numeros!
+            **Temos de garantir que sao numeros! tryparse use
              
              */
             Calculator calc = new Calculator();
