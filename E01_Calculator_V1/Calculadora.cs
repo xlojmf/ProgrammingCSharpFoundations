@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Design;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace E01_Calculator_V1
 {
@@ -21,11 +16,12 @@ namespace E01_Calculator_V1
         public static double number;
 
         // methods
+        // read the number the menu with tryparse unitl is true
         internal static int ReadOperation(string message)
-        {          
+        {
             Console.Write(message);
             string input = Console.ReadLine();
-            
+
             while (!int.TryParse(input, out int result) || result < 0 || result > 4)
             {
                 Console.WriteLine("\nInvalid input. Choose a valid menu option, a number between 0 and 4.");
@@ -33,9 +29,10 @@ namespace E01_Calculator_V1
                 input = Console.ReadLine();
             }
 
-            return result = int.Parse(input); 
-        }      
-        
+            return result = int.Parse(input);
+        }
+
+        // read the number method with tryparse unitl is true
         public static double ReadNumber(string message)
         {
             Console.Write(message);
@@ -46,7 +43,7 @@ namespace E01_Calculator_V1
                 Console.WriteLine("Invalid input. Please enter a number.");
                 input = Console.ReadLine();
             }
-            
+
             return number = double.Parse(input);
         }
 

@@ -1,10 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
+
+/*
+Propriedades:
+Valor1
+Valor2
+Operacao
+Método:
+LerNumeros()
+Somar()
+Subtrair()
+Multiplicar()
+Dividir()
+...
+(+ os utilitarios se quisermos. mas devemos colocar na calculadora e nao no Utility ?????)
+
+Quando a aplicacao arranca vai aparecer menu no ecra a perguntar a opercao que ela quer e enquanto nao selecionar na opcao correcta nao sai do menu. --> para poder usar estruturas ciclicas. 
+no menu deve constar tambem um valor para sair do menu ( 0 - saida, 1 - soma, 2 - subtracao, 3 - multiplicacao, 4 - divisao)
+**Temos de garantir que sao numeros! tryparse use
+
+ */
 
 namespace E01_Calculator_V1
 {
@@ -13,27 +28,10 @@ namespace E01_Calculator_V1
         static void Main(string[] args)
         {
 
-            /*
-            Propriedades:
-            Valor1
-            Valor2
-            Operacao
-            Método:
-            LerNumeros()
-            Somar()
-            Subtrair()
-            Multiplicar()
-            Dividir()
-            ...
-            (+ os utilitarios se quisermos. mas devemos colocar na calculadora e nao no Utility ?????)
-
-            Quando a aplicacao arranca vai aparecer menu no ecra a perguntar a opercao que ela quer e enquanto nao selecionar na opcao correcta nao sai do menu. --> para poder usar estruturas ciclicas. 
-            no menu deve constar tambem um valor para sair do menu ( 0 - saida, 1 - soma, 2 - subtracao, 3 - multiplicacao, 4 - divisao)
-            **Temos de garantir que sao numeros! tryparse use
-             
-             */
+            // instante a calculator 
             Calculator calc = new Calculator();
 
+            // cicle the application
             while (true)
             {
                 DesignMenu();
@@ -41,22 +39,24 @@ namespace E01_Calculator_V1
                 int menu = Calculator.ReadOperation("Enter your desired operation: ");
                 //calc.Menu = menu;// para usar no futuro
 
-                if (menu == 0) {
+                if (menu == 0)
+                {
                     Console.Clear();
                     Console.WriteLine("\n\n");
                     CenterDashWriteLine("Until next time");
                     Thread.Sleep(3000);
                     break;
                 }
-               
 
+                // read the numbers using class
                 double num1 = Calculator.ReadNumber("Enter first number: ");
                 double num2 = Calculator.ReadNumber("Enter second number: ");
 
+                // instance numbers
                 calc.Number1 = num1;
                 calc.Number2 = num2;
-                
 
+                // execture operations
                 switch (menu)
                 {
                     case 1:
@@ -94,6 +94,7 @@ namespace E01_Calculator_V1
 
         internal static void DesignMenu()
         {
+            // Design the user menu
             CenterDashWriteLine("Calculator Menu:");
             Console.WriteLine("\n1. Addition");
             Console.WriteLine("2. Subtraction");
@@ -106,6 +107,7 @@ namespace E01_Calculator_V1
 
         internal static void Clear()
         {
+            // Clear screen after 5 seconds
             Thread.Sleep(5000);
             Console.Clear();
         }
@@ -117,9 +119,6 @@ namespace E01_Calculator_V1
 
             // Create a line of dashes
             string dashes = new string('-', (Console.WindowWidth - text.Length) / 2 - 2);
-
-            // Position the cursor in the center of the console window
-            Console.CursorLeft = center - text.Length / 2 - dashes.Length;
 
             // Write the text surrounded by dashes
             Console.Write(dashes);
