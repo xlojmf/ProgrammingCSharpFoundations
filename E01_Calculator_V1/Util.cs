@@ -47,6 +47,38 @@ namespace E01_Calculator_V1
         }
 
 
+        internal void MultiVector()
+        {
+            string[,] menu = new string[,]
+           {
+                {"0"," -Exit"},
+                {"1"," -Add"},
+                {"2"," -Subtract"},
+                {"3"," -Multiply"},
+                {"4"," -Divide"}
+           };
+
+            string[] menuChoices = new string[menu.GetLength(0)];
+            for (int i = 0; i < menu.GetLength(0); i++)
+            {
+                menuChoices[i] = menu[i, 0];
+            }
+
+            Console.Write("Enter your choice: ");
+            string choice = Console.ReadLine();
+
+            if (!Array.Exists(menuChoices, element => element == choice))
+            {
+                Console.WriteLine("Invalid choice. Please enter a number from 0 to 4.");
+            } else
+            {
+                Console.WriteLine(choice);
+            }
+
+        }
+
+
+
         internal static void Clear()
         {
             // Clear screen after 5 seconds

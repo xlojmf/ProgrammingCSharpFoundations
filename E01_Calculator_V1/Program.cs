@@ -36,7 +36,9 @@ namespace E01_Calculator_V1
             // cicle the application
             while (true)
             {
+                use.MultiVector();
                 DesignMenu();
+
 
                 //calc.Menu = Calculator.ReadOperation("Enter your desired operation: ");
                 //calc.Menu = menu;// para usar no futuro

@@ -84,7 +84,6 @@ namespace E01_Calculator_V1
         }
 
 
-
         // read the number method with tryparse unitl is true
         public static double ReadNumber(string message)
         {
