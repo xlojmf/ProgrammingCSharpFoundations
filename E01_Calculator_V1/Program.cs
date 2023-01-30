@@ -31,16 +31,20 @@ namespace E01_Calculator_V1
 
             // instante a calculator 
             Calculator calc = new Calculator();
+            Util use= new Util();
 
             // cicle the application
             while (true)
             {
                 DesignMenu();
 
-                calc.Menu = Calculator.ReadOperation("Enter your desired operation: ");
+                //calc.Menu = Calculator.ReadOperation("Enter your desired operation: ");
                 //calc.Menu = menu;// para usar no futuro
-
-                if (calc.Menu == 0)
+                //calc.GetMenu("Enter your desired operation: ");
+                //int selectedMenu = calc.Menu;
+                use.GetMenuNumber();
+                int selectedMenu = use.Choice;
+                if (selectedMenu == 0)
                 {
                     Console.Clear();
                     Console.WriteLine("\n\n");
@@ -58,7 +62,7 @@ namespace E01_Calculator_V1
                 //calc.Number2 = num2;
 
                 // execture operations
-                switch (calc.Menu)
+                switch (selectedMenu)
                 {
                     case 1:
                         Console.WriteLine("\nResult: " + calc.Add());

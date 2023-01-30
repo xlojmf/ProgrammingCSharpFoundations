@@ -9,8 +9,8 @@ namespace E01_Calculator_V1
 {
     internal class Util
     {
-
-        internal static void DesignMenu()
+        public int Choice { get; set; }
+        internal static void DesignMenu1()
         {
             // Design the user menu
             CenterDashWriteLine("Calculator Menu:");
@@ -21,6 +21,30 @@ namespace E01_Calculator_V1
             Console.WriteLine("0. Quit\n");
         }
 
+        internal static void DesignMenu()
+        {
+            string[] menuOptions = { "1. Addition", "2. Subtraction", "3. Multiplication", "4. Division", "0. Quit" };
+            CenterDashWriteLine("Calculator Menu");
+            Console.WriteLine();
+            foreach (var menuOption in menuOptions)
+            {
+                Console.WriteLine(menuOption);
+            }
+        }
+
+        internal void GetMenuNumber()
+        {
+            int choice;
+            int[] menuOptions = { 0, 1, 2, 3, 4 };
+
+            Console.Write("Enter your choice: ");
+            while (!int.TryParse(Console.ReadLine(), out choice) || !menuOptions.Contains(choice))
+            {
+                Console.WriteLine("Invalid input. Please choose a valid option (0-4)");
+                Console.Write("Enter your choice: ");
+            }
+            Choice = choice;
+        }
 
 
         internal static void Clear()
