@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml.Linq;
 
 namespace E01_Calculator_V1
 {
@@ -10,7 +11,16 @@ namespace E01_Calculator_V1
         public double Number1 { get; set; }
         public double Number2 { get; set; }
         public int Menu { get; set; }
+        public double Result { get; set; }
 
+        public Calculator()
+        {
+            //construtor defualt
+            Number1 = 0;
+            Number2 = 0;
+            Menu= 0;
+            Result = 0;
+        }
 
         public static int result;
         public static double number;

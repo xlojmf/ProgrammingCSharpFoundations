@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using static E01_Calculator_V1.Util;
 
 /*
 Propriedades:
@@ -36,10 +37,10 @@ namespace E01_Calculator_V1
             {
                 DesignMenu();
 
-                int menu = Calculator.ReadOperation("Enter your desired operation: ");
+                calc.Menu = Calculator.ReadOperation("Enter your desired operation: ");
                 //calc.Menu = menu;// para usar no futuro
 
-                if (menu == 0)
+                if (calc.Menu == 0)
                 {
                     Console.Clear();
                     Console.WriteLine("\n\n");
@@ -49,15 +50,15 @@ namespace E01_Calculator_V1
                 }
 
                 // read the numbers using class
-                double num1 = Calculator.ReadNumber("Enter first number: ");
-                double num2 = Calculator.ReadNumber("Enter second number: ");
+                calc.Number1 = Calculator.ReadNumber("Enter first number: ");
+                calc.Number2 = Calculator.ReadNumber("Enter second number: ");
 
                 // instance numbers
-                calc.Number1 = num1;
-                calc.Number2 = num2;
+                //calc.Number1 = num1;
+                //calc.Number2 = num2;
 
                 // execture operations
-                switch (menu)
+                switch (calc.Menu)
                 {
                     case 1:
                         Console.WriteLine("\nResult: " + calc.Add());
@@ -89,44 +90,6 @@ namespace E01_Calculator_V1
                         break;
                 }
             }
-
         }
-
-        internal static void DesignMenu()
-        {
-            // Design the user menu
-            CenterDashWriteLine("Calculator Menu:");
-            Console.WriteLine("\n1. Addition");
-            Console.WriteLine("2. Subtraction");
-            Console.WriteLine("3. Multiplication");
-            Console.WriteLine("4. Division");
-            Console.WriteLine("0. Quit\n");
-        }
-
-
-
-        internal static void Clear()
-        {
-            // Clear screen after 5 seconds
-            Thread.Sleep(5000);
-            Console.Clear();
-        }
-
-        internal static void CenterDashWriteLine(string text)
-        {
-            // Determine the center of the console window
-            int center = Console.WindowWidth / 2;
-
-            // Create a line of dashes
-            string dashes = new string('-', (Console.WindowWidth - text.Length) / 2 - 2);
-
-            // Write the text surrounded by dashes
-            Console.Write(dashes);
-            Console.Write(text);
-            Console.WriteLine(dashes);
-        }
-
-
     }
-
 }
