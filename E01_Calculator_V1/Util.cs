@@ -77,8 +77,6 @@ namespace E01_Calculator_V1
 
         }
 
-
-
         internal static void Clear()
         {
             // Clear screen after 5 seconds

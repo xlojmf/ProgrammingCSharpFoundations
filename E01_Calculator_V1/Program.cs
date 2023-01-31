@@ -36,7 +36,7 @@ namespace E01_Calculator_V1
             // cicle the application
             while (true)
             {
-                use.MultiVector();
+                //use.MultiVector();
                 DesignMenu();
 
 
