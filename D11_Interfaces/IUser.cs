@@ -6,17 +6,19 @@ using System.Threading.Tasks;
 
 namespace D11_Interfaces
 {
-    internal interface IUser
+    interface IUser
     {
 
         #region Properties
-        string userName { get; }
+        string UserName { get; }
         string Password { get; }
+        string Name { get; }
         #endregion
 
 
         #region Methods
-
+        void Login();
+        void Logout();
         void Message(string message);
 
         #endregion

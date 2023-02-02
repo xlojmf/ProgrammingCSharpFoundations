@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{309CC317-67E5-4639-9A91-E16B5B35F647}</ProjectGuid>
+    <ProjectGuid>{7D8E06DD-3899-4AF5-A6BB-27652398F383}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>D11_Interfaces</RootNamespace>
-    <AssemblyName>D11_Interfaces</AssemblyName>
+    <RootNamespace>E01_CalculatorInterface</RootNamespace>
+    <AssemblyName>E01_CalculatorInterface</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IUser.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Classes\Calculator.cs" />
+    <Compile Include="Interfaces\ICalculator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

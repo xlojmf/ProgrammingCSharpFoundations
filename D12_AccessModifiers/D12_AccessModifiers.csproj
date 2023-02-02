@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{309CC317-67E5-4639-9A91-E16B5B35F647}</ProjectGuid>
+    <ProjectGuid>{E8B8F1B5-0634-4E34-AAA6-7984A093694B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>D11_Interfaces</RootNamespace>
-    <AssemblyName>D11_Interfaces</AssemblyName>
+    <RootNamespace>D12_AccessModifiers</RootNamespace>
+    <AssemblyName>D12_AccessModifiers</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,19 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IUser.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\D00_Utility\D00_Utility.csproj">
-      <Project>{4B007FA1-1A3B-4AF5-9AB2-3B43E8B581C3}</Project>
-      <Name>D00_Utility</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
