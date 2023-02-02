@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace E02_CalculatorInterface
 {
@@ -19,20 +15,20 @@ namespace E02_CalculatorInterface
         #endregion
 
         #region Constructor
-        
-        public Calculator() 
-        { 
-         Number1= 0;
-         Number2= 0;
-         Operation = 0;
-         Result = 0;
+
+        public Calculator()
+        {
+            Number= 0;
+            Number1 = 0;
+            Number2 = 0;
+            Operation = 0;
+            Result = 0;
         }
 
         #endregion
 
 
         #region methods
-
 
         public int GetMenu(string message)
         {
@@ -47,7 +43,6 @@ namespace E02_CalculatorInterface
             }
             return Operation = int.Parse(input);
         }
-
 
         public double ReadNumber(string message)
         {
@@ -66,7 +61,7 @@ namespace E02_CalculatorInterface
 
         public double Add()
         {
-            return Number1 + Number2;
+            return Number1 + Number1;
         }
         public double Subtract()
         {
