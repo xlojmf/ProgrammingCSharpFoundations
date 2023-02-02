@@ -11,18 +11,19 @@ namespace E02_CalculatorInterface
         #region properties
         double Number1 { get; }
         double Number2 { get; }
-        string Operation { get; }
+        int Operation { get; }
         double Result { get; }
         #endregion
 
         #region methods
 
-        void Add();
-        void Subtract();
-        void Multiply();
-        void Divide();
-        void ReadNumbers();
-        void ShowResult();
+        double Add();
+        double Subtract();
+        double Multiply();
+        double Divide();
+        int GetMenu(string message);
+        double ReadNumber1(string message);
+        double ReadNumber2(string message);
         #endregion
     }
 }

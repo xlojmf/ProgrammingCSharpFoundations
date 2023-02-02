@@ -37,5 +37,17 @@ namespace D00_Utility
             return number == 0;
             //return number == 0 ? true : false;
         }
+
+        public static bool NumberDifferent0(double number)
+        {
+            return number != 0;       
+        }
+
+        public static bool ValidateNumberDouble(string read)
+        {
+            return double.TryParse(read, out double number) && NumberDifferent0(double.Parse(read));
+        }
+
+
     }
 }
