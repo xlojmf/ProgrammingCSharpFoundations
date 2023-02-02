@@ -9,6 +9,7 @@ namespace E02_CalculatorInterface
     internal interface ICalculator
     {
         #region properties
+        double Number { get;}
         double Number1 { get; }
         double Number2 { get; }
         int Operation { get; }
@@ -22,8 +23,7 @@ namespace E02_CalculatorInterface
         double Multiply();
         double Divide();
         int GetMenu(string message);
-        double ReadNumber1(string message);
-        double ReadNumber2(string message);
+        double ReadNumber(string message);
         #endregion
     }
 }

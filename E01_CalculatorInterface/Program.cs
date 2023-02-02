@@ -26,8 +26,8 @@ namespace E02_CalculatorInterface
                     break;
                 }
 
-                calc.ReadNumber1("Enter first number: ");
-                calc.ReadNumber2("Enter second number: ");
+                calc.Number1 = calc.ReadNumber("Enter first number: ");
+                calc.Number2 = calc.ReadNumber("Enter first number: ");
 
                 switch (selectedMenu)
                 {

@@ -9,7 +9,10 @@ namespace E02_CalculatorInterface
     internal class Calculator : ICalculator
     {
         #region properties
+
+        public double Number { get; set; }
         public double Number1 { get; set; }
+
         public double Number2 { get; set; }
         public int Operation { get; set; }
         public double Result { get; set; }
@@ -46,7 +49,7 @@ namespace E02_CalculatorInterface
         }
 
 
-        public double ReadNumber1(string message)
+        public double ReadNumber(string message)
         {
             Console.Write(message);
             string input = Console.ReadLine();
@@ -57,21 +60,7 @@ namespace E02_CalculatorInterface
                 input = Console.ReadLine();
             }
 
-            return Number1 = double.Parse(input);
-
-        }
-        public double ReadNumber2(string message)
-        {
-            Console.Write(message);
-            string input = Console.ReadLine();
-
-            while (!double.TryParse(input, out double number))
-            {
-                Console.WriteLine("Invalid input. Please enter a number.");
-                input = Console.ReadLine();
-            }
-
-            return Number2 = double.Parse(input);
+            return Number = double.Parse(input);
 
         }
 
