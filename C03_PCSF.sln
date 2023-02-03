@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E02_CalculatorInterface", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D12_AccessModifiers", "D12_AccessModifiers\D12_AccessModifiers.csproj", "{E8B8F1B5-0634-4E34-AAA6-7984A093694B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D13_Abstraction", "D13_Abstraction\D13_Abstraction.csproj", "{88BB1C86-DEB6-40A6-A218-A0328EBFEF99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{E8B8F1B5-0634-4E34-AAA6-7984A093694B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8B8F1B5-0634-4E34-AAA6-7984A093694B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8B8F1B5-0634-4E34-AAA6-7984A093694B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88BB1C86-DEB6-40A6-A218-A0328EBFEF99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88BB1C86-DEB6-40A6-A218-A0328EBFEF99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88BB1C86-DEB6-40A6-A218-A0328EBFEF99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88BB1C86-DEB6-40A6-A218-A0328EBFEF99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
