@@ -30,21 +30,38 @@ namespace D11_Interfaces
             Name = name;
         }
 
-
-
         #endregion
 
         #region Methods
-        public void Login()
+        public void Login(string Name)
         {
-
+            Console.WriteLine($"Welcome {Name}!");
         }
-        public void Message(string message)
+        public string ReadUserData(string message)
         {
-
+            Console.WriteLine(message);
+            return Console.ReadLine();
         }
-        public void Logout() { }
+        public void Logout(string message) 
+        {
+            Console.WriteLine(message);
+        }
         #endregion
 
+        public string GetLogoutMessage(int attempts)
+        {
+            return (attempts == 3) ? "Maximum number of attempts reached. Logging out." : "Invalid username or password. Logging out.";
+        }
+
+        public User[] CreateUser()
+        {
+            return new User[] {
+            new User("user1", "pass1", "User 1"),
+            new User("user2", "pass2", "User 2")
+        };
+        }
+
     }
+
 }
+

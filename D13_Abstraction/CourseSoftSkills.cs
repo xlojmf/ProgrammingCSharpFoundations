@@ -48,5 +48,3 @@ namespace D13_Abstraction
 
 
 
-// d11 qdo a aplicacao arranca quer criar dois utilizadores por defeito, e quer pedir o login e a pessoa vai pedir o username e password, e ao inserir na consola vai procurar se existem ou nao laggado ou nao 
-// usar array para criar os dois utilizadores

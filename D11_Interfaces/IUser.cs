@@ -17,9 +17,11 @@ namespace D11_Interfaces
 
 
         #region Methods
-        void Login();
-        void Logout();
-        void Message(string message);
+        void Login(string name);
+        void Logout(string message);
+        string ReadUserData(string message);
+
+        User[] CreateUser();
 
         #endregion
 
