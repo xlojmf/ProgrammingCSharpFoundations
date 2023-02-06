@@ -50,7 +50,7 @@ namespace D11_Interfaces
 
         public string GetLogoutMessage(int attempts)
         {
-            return (attempts == 3) ? "Maximum number of attempts reached. Logging out." : "Invalid username or password. Logging out.";
+            return (attempts == 3) ? "Maximum number of attempts reached. Logging out." : "Invalid username or password.";
         }
 
         public User[] CreateUser()

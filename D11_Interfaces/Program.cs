@@ -17,7 +17,7 @@ namespace D11_Interfaces
 
             Utility.SetUnicodeConsole();
 
-            Utility.WriteTitle("Interface com login");
+            Utility.WriteTitle("Interface with login");
 
             User userdefault = new User();
             User[] users = userdefault.CreateUser();
@@ -30,6 +30,19 @@ namespace D11_Interfaces
                 string username = userdefault.ReadUserData("Enter your username: ");
                 string password = userdefault.ReadUserData("Enter your password: ");
 
+                User loggedInUser1 = Array.Find(users, user => user.UserName == username && user.Password == password);
+                if (loggedInUser1 != null)
+                {
+                    loggedInUser1.Login(username);
+                    break;
+                }
+                else
+                {
+                    attempts++;
+                    userdefault.Logout(userdefault.GetLogoutMessage(attempts));
+                }
+
+                /*
                 foreach (var user in users)
                 {
                     if (user.UserName == username && user.Password == password)
@@ -45,9 +58,9 @@ namespace D11_Interfaces
                     attempts++;
                     userdefault.Logout(userdefault.GetLogoutMessage(attempts));
                     
-                }
+                }*/
             }
-       
+
             Utility.TerminateConsole();
         }
     }
