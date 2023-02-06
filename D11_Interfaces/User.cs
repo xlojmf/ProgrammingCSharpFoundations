@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,10 +18,11 @@ namespace D11_Interfaces
         #endregion
 
         #region Constructor
-        public User() { 
-        Name= string.Empty;
-        UserName= string.Empty; 
-        Password= string.Empty;
+        public User()
+        {
+            Name = string.Empty;
+            UserName = string.Empty;
+            Password = string.Empty;
         }
 
         public User(string userName, string password, string name)
@@ -42,7 +44,7 @@ namespace D11_Interfaces
             Console.WriteLine(message);
             return Console.ReadLine();
         }
-        public void Logout(string message) 
+        public void Logout(string message)
         {
             Console.WriteLine(message);
         }
@@ -53,12 +55,46 @@ namespace D11_Interfaces
             return (attempts == 3) ? "Maximum number of attempts reached. Logging out." : "Invalid username or password.";
         }
 
-        public User[] CreateUser()
+        public string AddUser()
         {
-            return new User[] {
-            new User("user1", "pass1", "User 1"),
-            new User("user2", "pass2", "User 2")
+            Console.WriteLine("Do you wish to create an account? (yes or no)");
+            string yesOrNo = Console.ReadLine();
+
+            while (yesOrNo != "yes" && yesOrNo != "no")
+            {
+                Console.WriteLine("Invalid response. Please enter either 'yes' or 'no'.");
+                yesOrNo = Console.ReadLine();
+            }
+            if (yesOrNo == "yes")
+            {
+                GetName();
+            }
+            return yesOrNo;
+
+        }
+
+        public string GetName()
+        {
+            Console.WriteLine("What is your name");
+            return Name = Console.ReadLine();
+        }
+
+        public List<User> CreateUser()
+        {
+            return new List<User> {
+        new User("user1", "pass1", "User 1"),
+        new User("user2", "pass2", "User 2")
         };
+        }
+
+        public void ListUsers(List<User> users)
+        {
+            Console.WriteLine("\nUser List:");
+            for (int i = 0; i < users.Count; i++)
+            {
+                Console.WriteLine($"Username: {users[i].UserName}");
+            }
+            Console.WriteLine();
         }
 
     }

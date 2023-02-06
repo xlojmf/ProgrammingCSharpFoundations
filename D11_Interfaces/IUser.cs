@@ -20,9 +20,10 @@ namespace D11_Interfaces
         void Login(string name);
         void Logout(string message);
         string ReadUserData(string message);
-
-        User[] CreateUser();
-
+        string AddUser();
+        string GetName();
+        List<User> CreateUser();
+        void ListUsers(List<User> users);
         #endregion
 
 
