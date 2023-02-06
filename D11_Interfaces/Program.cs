@@ -34,7 +34,7 @@ namespace D11_Interfaces
                 else
                 {
                     string name = userdefault.AddUser();
-                    if (name != "no" && attempts == 0)
+                    if (attempts == 0 && name != "no")
                     {
                         users.Add(new User(username, password, name));
                         userdefault.ListUsers(users);
