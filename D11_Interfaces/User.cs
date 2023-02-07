@@ -37,7 +37,7 @@ namespace D11_Interfaces
         #region Methods
         public void Login(string Name)
         {
-            Console.WriteLine($"Welcome {Name}!");
+            Console.WriteLine($"{Name}>");
         }
         public string ReadUserData(string message)
         {
